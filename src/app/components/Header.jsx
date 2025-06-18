@@ -16,8 +16,12 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <DarkModeSwitch />
           <Link href={'/'} className='flex gap-1 items-center'>
-            <span className='text-2xl font-bold bg-green-500 py-1 px-2 rounded-lg'>Movie</span>
-            <span className='text-xl hidden sm:inline'>Radar</span>
+            {/* Show only on smaller screens (hidden on lg and above) */}
+            <span className='text-2xl lg:hidden font-bold bg-green-500 py-1 px-2 rounded-lg'>MR</span>
+            
+            {/* Show only on larger screens (hidden on smaller screens) */}
+            <span className='text-2xl hidden lg:inline font-bold bg-green-500 py-1 px-2 rounded-lg'>Movie</span>
+            <span className='text-xl hidden lg:inline'>Radar</span>
           </Link>
         </div>
     </div>
