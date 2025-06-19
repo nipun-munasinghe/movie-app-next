@@ -1,5 +1,5 @@
 import Results from '@/app/components/Results';
-import React from 'react'
+import { Suspense } from 'react'; // Only import if you use Suspense
 
 export default async function SearchPage({ params }) {
   const searchTerm = params.searchTerm;
@@ -8,12 +8,16 @@ export default async function SearchPage({ params }) {
   );
   const data = await res.json();
   const results = data.results;
+
   return (
     <div>
-      {results &&
-        results.length === <h1 className='text-center pt-6'>No results found</h1>
-      }
-      {results && <Results results={results} />}
+      {results && results.length === 0 && (
+        <h1 className='text-center pt-6'>No results found</h1>
+      )}
+      {/* Only wrap in Suspense if Results uses useSearchParams() */}
+      <Suspense fallback={<div>Loading results...</div>}>
+        {results && <Results results={results} />}
+      </Suspense>
     </div>
   );
 }
