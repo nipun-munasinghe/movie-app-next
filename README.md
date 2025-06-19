@@ -5,7 +5,7 @@ Welcome to Movie Radar – a modern, fully responsive movie discovery platform b
 
 ## Screenshots
 
-![Landing Page](landing-page.png)
+![Landing Page](./public/landing-page.png)
 
 
 ## Features
