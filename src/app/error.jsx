@@ -62,7 +62,7 @@ export default function Error({ error, reset }) {
           )}
 
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Don't worry, our team has been notified and we're working on a fix.
+            Don&apos;t worry, our team has been notified and we&apos;re working on a fix.
           </p>
         </div>
 

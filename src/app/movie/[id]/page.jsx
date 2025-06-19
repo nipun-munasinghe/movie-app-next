@@ -108,7 +108,7 @@ export default async function page({ params }) {
                                     </h1>
                                     {movie.tagline && (
                                         <p className="text-xl lg:text-2xl text-gray-300 italic">
-                                            "{movie.tagline}"
+                                            &quot;{movie.tagline}&quot;
                                         </p>
                                     )}
                                     {director && (
