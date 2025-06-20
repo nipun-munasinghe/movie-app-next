@@ -4,13 +4,13 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    remotePatterns: [
-      {
+    remotePatterns: [{
         protocol: 'https',
         hostname: 'image.tmdb.org',
-        pathname: '**',
+        pathname: '**'
       },
     ],
   }
 };
+
 module.exports = nextConfig;

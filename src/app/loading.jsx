@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from 'next/image'
+import React from 'react'
 
 export default function loading() {
   return (
@@ -12,5 +12,5 @@ export default function loading() {
         className="h-32"
       />
     </div>
-  );
+  )
 }
